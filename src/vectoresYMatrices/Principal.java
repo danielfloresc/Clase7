@@ -31,60 +31,51 @@ public class Principal extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        texto = new javax.swing.JTextField();
+        cajaDeTexto = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
-        lista = new javax.swing.JList<>();
-        label = new javax.swing.JLabel();
-        vector = new javax.swing.JButton();
-        matris = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        list = new javax.swing.JList<>();
+        salida = new javax.swing.JLabel();
+        botonVector = new javax.swing.JButton();
+        matriz = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(0, 0, 102));
+        jPanel1.setBackground(new java.awt.Color(0, 102, 102));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        texto.addActionListener(new java.awt.event.ActionListener() {
+        cajaDeTexto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textoActionPerformed(evt);
+                cajaDeTextoActionPerformed(evt);
             }
         });
-        jPanel1.add(texto, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 180, 190, 40));
+        jPanel1.add(cajaDeTexto, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 320, 190, 60));
 
-        lista.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
-        jScrollPane1.setViewportView(lista);
+        list.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        jScrollPane1.setViewportView(list);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 30, 110, 130));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 110, 210));
 
-        label.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
-        jPanel1.add(label, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 250, 370, 170));
+        salida.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        jPanel1.add(salida, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 30, 230, 390));
 
-        vector.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
-        vector.setText("Mi boton tipo vector");
-        vector.addActionListener(new java.awt.event.ActionListener() {
+        botonVector.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        botonVector.setText("Mi boton tipo vector");
+        botonVector.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                vectorActionPerformed(evt);
+                botonVectorActionPerformed(evt);
             }
         });
-        jPanel1.add(vector, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, 150, -1));
+        jPanel1.add(botonVector, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 270, 150, -1));
 
-        matris.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
-        matris.setText("Matriz");
-        matris.addActionListener(new java.awt.event.ActionListener() {
+        matriz.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        matriz.setText("Matriz");
+        matriz.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                matrisActionPerformed(evt);
+                matrizActionPerformed(evt);
             }
         });
-        jPanel1.add(matris, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, -1, -1));
-
-        jButton3.setText("Borrar");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, -1, -1));
+        jPanel1.add(matriz, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 190, -1, -1));
 
         jButton1.setText("Recuperar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -92,13 +83,13 @@ public class Principal extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, -1, -1));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 100, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 405, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 575, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -110,68 +101,47 @@ public class Principal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void textoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textoActionPerformed
+    private void cajaDeTextoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaDeTextoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_textoActionPerformed
+    }//GEN-LAST:event_cajaDeTextoActionPerformed
     private int contadorNombres = 0;
-    private int num = 0;
-    private void vectorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_vectorActionPerformed
-        String nombreObtenido = texto.getText();
+    private void botonVectorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonVectorActionPerformed
+        String nombreObtenido = cajaDeTexto.getText();
         String[] nombres = new String[50];
-        num++;
         nombres[contadorNombres] = nombreObtenido;
         contadorNombres++;
         String contenidoCompleto="";
         for(String nombresSeparados : nombres){
             if(nombresSeparados != null){
-                contenidoCompleto =  
-                        label.getText() 
-                        + "<html><alig>" 
-                        + num 
-                        + "." 
-                        +  nombresSeparados 
-                        + ", ";
-                label.setText(contenidoCompleto);
-                lista.removeAll();
+                contenidoCompleto =  salida.getText() + "<html><alig>" +  nombresSeparados + ", ";
+                salida.setText(contenidoCompleto);
+                list.removeAll();
             }
         }
-    }//GEN-LAST:event_vectorActionPerformed
+    }//GEN-LAST:event_botonVectorActionPerformed
     private final DefaultListModel modelo = new DefaultListModel();
-    private void matrisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_matrisActionPerformed
+    private void matrizActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_matrizActionPerformed
         String[][] matriz = new String[5][5];
         modelo.clear();
-        lista.setModel(modelo);
-        for(int i = 0;i<5;i++)
-        {
-            for(int j = 0;j<5;j++)
-            {
-                String mostrar = texto.getText()+"["+i+"]"+"["+j+"]";
+        list.setModel(modelo);
+        for(int i = 0;i<5;i++){
+            for(int j = 0;j<5;j++){
+                String mostrar = cajaDeTexto.getText()+"["+i+"]"+"["+j+"]";
                 matriz[i][j] = mostrar;
                 modelo.addElement(mostrar);
                 //JOptionPane.showMessageDialog(null, mostrar);
             }
         }
-    }//GEN-LAST:event_matrisActionPerformed
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        label.setText("");
-        texto.setText("");
-        
-        contadorNombres = 0;
-        
-        modelo.removeAllElements();
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_matrizActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
          int e = modelo.getSize();
-         String recuperar = "";
-        
-         for(int i = 0; i<e; i++)
-         {
-        Object copiar = "<html><alig>" + modelo.getElementAt(i) +", ";
-             recuperar += copiar;
+         String restaurar = "";
+         for(int i = 0; i<e; i++){
+         Object a = "<html><alig>" + modelo.getElementAt(i) +", ";
+             restaurar += a;
          }
-         label.setText(recuperar);
+         salida.setText(restaurar);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     
@@ -211,14 +181,13 @@ public class Principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton botonVector;
+    private javax.swing.JTextField cajaDeTexto;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JLabel label;
-    private javax.swing.JList<String> lista;
-    private javax.swing.JButton matris;
-    private javax.swing.JTextField texto;
-    private javax.swing.JButton vector;
+    private javax.swing.JList<String> list;
+    private javax.swing.JButton matriz;
+    private javax.swing.JLabel salida;
     // End of variables declaration//GEN-END:variables
 }
